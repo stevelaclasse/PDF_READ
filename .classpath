@@ -8,9 +8,9 @@
 	</classpathentry>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
 		<attributes>
+			<attribute name="test" value="true"/>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
@@ -23,5 +23,9 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/wfozing/Documents/Maven/PDF_AUSLESEN/lib/commons-logging-1.1-for-pdfbox.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wfozing/Documents/Maven/PDF_AUSLESEN/lib/pdfbox-app-2.0.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wfozing/Documents/Maven/PDF_AUSLESEN/lib/fontbox-2.0.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wfozing/Documents/Maven/PDF_AUSLESEN/lib/PDFxStream.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
