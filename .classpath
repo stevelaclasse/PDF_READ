@@ -27,5 +27,6 @@
 	<classpathentry kind="lib" path="C:/Users/wfozing/Documents/Maven/PDF_AUSLESEN/lib/pdfbox-app-2.0.14.jar"/>
 	<classpathentry kind="lib" path="C:/Users/wfozing/Documents/Maven/PDF_AUSLESEN/lib/fontbox-2.0.14.jar"/>
 	<classpathentry kind="lib" path="C:/Users/wfozing/Documents/Maven/PDF_AUSLESEN/lib/PDFxStream.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wfozing/Documents/Maven/PDF_AUSLESEN/lib/AspriseJavaPDF.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

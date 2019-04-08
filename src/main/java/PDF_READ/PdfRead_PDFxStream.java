@@ -1,4 +1,4 @@
-package extract;
+package PDF_READ;
 
 import java.io.IOException;
 
@@ -13,7 +13,7 @@ public class PdfRead_PDFxStream {
 		
 	}
 	
-	public String extraction_de_texte(String fileName) {
+	public String extraction_of_text(String fileName) {
 
 		String return_text="";
 		

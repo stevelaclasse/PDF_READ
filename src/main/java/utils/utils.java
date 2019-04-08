@@ -1,7 +1,4 @@
-package extract;
-
-import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.text.PDFTextStripper;
+package utils;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -10,62 +7,14 @@ import java.io.FileWriter;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-
-public class PdfRead_PdfBox {
-
-	//used variables
-    
-    String parsedText;
-    
-    PDFTextStripper pdfStripper;
-
-    //defualt constructor 
-    public PdfRead_PdfBox() {
-    	
-    }
-
-    // text extraction from a PDF file
-    public String extraction_de_texte_pdfbox(String fileName) {
-        
-        File f = new File(fileName); //file creation
-        PDDocument fichier;
-  
-        if (!f.isFile()) { //testing if file exist
-        	
-            System.out.println("The file" + fileName + "do not exist");
-            
-            return null;
-        }
-  
-   	
-            
-
-        try {
-        	
-            fichier=PDDocument.load(f);
-            pdfStripper = new PDFTextStripper();
-           
-            pdfStripper.setStartPage(1);
-            pdfStripper.setEndPage(1);
-            
-            
-            parsedText = pdfStripper.getText(fichier);
-            
-        	} 
-        catch (Exception e) {
-            
-            e.printStackTrace();
-
-            return null;
-        	}
-        
-        System.out.println("\n\n\n ### Extraction with PdfBox ###\n\n\n ");
-        
-        return parsedText;
-    }
+public class utils {
+	
+	public utils() {
+		
+	}
 
     // writing the extracted text in a txt file
-    void writeTexttoFile(String pdfText, String fileName) {
+    public static void writeTexttoFile(String pdfText, String fileName) {
   
         System.out.println("\n Writting the text in a file :" + fileName);
         try {
@@ -84,7 +33,8 @@ public class PdfRead_PdfBox {
         System.out.println("Writting End\n");
     }
     
-    public String[] parametres_fichier(){
+ 
+    public static String[] parametres_fichier(){
     	
 		String[] param=new String[]{"","",""};
 		
@@ -134,5 +84,5 @@ public class PdfRead_PdfBox {
 		
 		return param;
     }
-
-    }
+	
+}
