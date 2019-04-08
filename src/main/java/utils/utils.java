@@ -40,7 +40,7 @@ public class utils {
 		
 		System.out.println("Extracting text in a PDF");
 
-		JFileChooser choix = new JFileChooser("C:\\Users\\wfozing\\Documents");	//Pour selectionner le fichier PDF
+		JFileChooser choix = new JFileChooser("C:\\");	//Pour selectionner le fichier PDF
 
 		choix.setFileSelectionMode(JFileChooser.FILES_ONLY);	//on ne peut choisir qu'un fichier
 
