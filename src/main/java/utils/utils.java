@@ -1,8 +1,11 @@
 package utils;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
+import java.util.ArrayList;
 
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -83,6 +86,32 @@ public class utils {
 		}
 		
 		return param;
+    }
+    
+    public String[] file_in_table(String filename) {
+    	
+    	ArrayList<String> lines=new ArrayList<String>();
+    	String[] tab;
+    	
+    	try {
+    		BufferedReader b=new BufferedReader (new FileReader (new File(filename)));
+    		String line;
+    		
+    		while( ((line = b.readLine()) != null)) {
+    			
+    			lines.add(line);
+    		}
+
+    		
+    		b.close();
+    		}
+    		catch (Exception e) {
+    			e.printStackTrace();
+    		}
+    	tab=(String[]) lines.toArray();
+    	
+    	return tab;
+    	
     }
 	
 }
