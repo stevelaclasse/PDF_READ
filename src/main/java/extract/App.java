@@ -1,6 +1,5 @@
 package extract;
 
-import PDF_READ.PdfRead_AspriseJavaPDFLib;
 import PDF_READ.PdfRead_PDFxStream;
 import PDF_READ.PdfRead_PdfBox;
 import utils.utils;
@@ -19,7 +18,6 @@ public class App
         //we are testing 2 API vor the extraction
     	PdfRead_PdfBox pdf=new PdfRead_PdfBox();
     	PdfRead_PDFxStream pdf2=new PdfRead_PDFxStream();
-    	PdfRead_AspriseJavaPDFLib pdf3= new PdfRead_AspriseJavaPDFLib();
     	//information on the file
     	String[] details=new String[]{"","",""};
     	
@@ -46,9 +44,6 @@ public class App
     	output2=pdf2.extraction_of_text(details[1]);
 		System.out.println(output2);
 		
-    	//third: Use of the API ASPRISEJAVAPDF
-    	output3=pdf3.extraction_of_text(details[1]);
-		System.out.println(output3);
 		
 		//Writting in a Text File
 		
@@ -61,15 +56,11 @@ public class App
 		//PDFXStream extracted text
 		text_file=details[2]+"\\"+details[0]+"PDFxSTream"+".txt";
 		
-		file_produced=text_file;
+		file_produced=text_file; //We choose the extraction with PdfxStream
 		
 		System.out.println("text_File Name:"+text_file+"\n \n");
 		utils.writeTexttoFile(output2, text_file);
 		
-		//ASPRISEJAVAPDF extracted text
-		text_file=details[2]+"\\"+details[0]+"ASPRISEJAVAPDFLib"+".txt";
-		System.out.println("text_File Name:"+text_file+"\n \n");
-		utils.writeTexttoFile(output3, text_file);
 		
 
 
